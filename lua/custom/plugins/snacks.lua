@@ -26,8 +26,38 @@ return {
     notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+  },
+  keys = {
+    {
+      '<leader>lg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
+    },
+    {
+      '<leader>lg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
+    },
+    {
+      '<C-p>',
+      function()
+        Snacks.picker.pick 'files'
+      end,
+      desc = 'Find Files',
+    },
+    {
+      '<C-n>',
+      function()
+        Snacks.explorer()
+      end,
+      desc = 'Explorer',
+    },
   },
 }
